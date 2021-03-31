@@ -1,0 +1,7 @@
+torch
+scipy
+underthesea
+gensim
+spacy
+rank_bm25
+rasa
