@@ -12,6 +12,10 @@ stories:
   - action: action_ask_detail
   - intent: deny
   - action: utter_deny
+  - intent: send_ques
+  - action: utter_send_ques
+  - intent: after_send_ques
+  - action: utter_after_send_ques
 
 - story: quick_path_1
   steps:
@@ -30,6 +34,10 @@ stories:
   - action: action_ask_detail
   - intent: deny
   - action: utter_deny
+  - intent: send_ques
+  - action: utter_send_ques
+  - intent: after_send_ques
+  - action: utter_after_send_ques
 
 - story: slow_path_1
   steps:
@@ -52,4 +60,15 @@ stories:
   - action: action_ask_detail
   - intent: deny
   - action: utter_deny
+  - intent: send_ques
+  - action: utter_send_ques
+  - intent: after_send_ques
+  - action: utter_after_send_ques
+
+# - story: deny path
+#   steps:
+#   - intent: send_ques
+#   - action: utter_send_ques
+#   - intent: after_send_ques
+#   - action: utter_after_send_ques
 

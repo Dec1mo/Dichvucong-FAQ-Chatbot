@@ -9,6 +9,7 @@ intents:
   - ask
   - ask_detail
   - send_ques
+  - after_send_ques
 
 slots:
   question:
@@ -18,19 +19,38 @@ slots:
 responses:
   utter_default:
   - text: "Tôi không hiểu ý của anh/chị. Hãy nói lại cho tôi thắc mắc của anh/chị."
+  - text: "Làm ơn hãy nói rõ hơn ý của mình."
+  - text: "Xin lỗi, tôi không hiểu ý anh/chị."
+  - text: "Làm ơn diễn giải ý định của mình một cách dễ hiểu hơn."
+  - text: "Anh/Chị có thể nói rõ hơn được không?"
 
   utter_fallback:
   - text: "Tôi không hiểu ý của anh/chị. Hãy nói lại cho tôi thắc mắc của anh/chị."
+  - text: "Làm ơn hãy nói rõ hơn ý của mình."
+  - text: "Xin lỗi, tôi không hiểu ý anh/chị."
+  - text: "Làm ơn diễn giải ý định của mình một cách dễ hiểu hơn."
+  - text: "Anh/Chị có thể nói rõ hơn được không?"
 
   utter_greet:
   - text: "Hãy cho tôi biết thắc mắc của anh/chị."
+  - text: "Xin chào, tôi có thể giúp gì được cho anh/chị?"
+  - text: "Anh/Chị có phản ánh gì?"
+  - text: "Xin hãy cho tôi biết thắc mắc của anh/chị."
+  - text: "Tôi sẵn sàng hỗ trợ anh/chị với những thắc mắc của mình."
 
   utter_goodbye:
   - text: "Xin cảm ơn và tạm biệt!"
+  - text: "Hẹn gặp lại!"
+  - text: "Cảm ơn anh/chị đã sử dụng dịch vụ của chúng tôi. Việc này giúp tăng tính sẵn sàng và giảm thiểu thời gian chờ."
+  - text: "Rất vui đã được giao tiếp với anh/chị!"
+  - text: "Chúng tôi mong anh/chị đã có một khoảng thời gian hài lòng! Xin tạm biệt."
 
   utter_affirm:
-  - text: "Tôi đã ghi nhận phản hồi của anh/chị."
-    # image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Chúng tôi đã ghi nhận phản hồi của anh/chị."
+  - text: "Phản hồi của anh/chị đã được ghi nhận."
+  - text: "Cảm ơn sự phản hồi của anh/chị!"
+  - text: "Rất vui vì đã giải quyết được vấn đề của anh/chị!"
+  - text: "Chân thành cảm ơn anh/chị đã dành thời gian cho hệ thống của chúng tôi."
 
   utter_deny:
   - text: "Anh/Chị muốn hiển thị lại câu hỏi tương tự đã được trả lời hay gửi thắc mắc cho chúng tôi (sẽ mất 3-5 ngày để xử lý và phản hồi)?"
@@ -44,10 +64,25 @@ responses:
 
   utter_thank:
   - text: "Cảm ơn anh/chị đã sử dụng dịch vụ hỏi đáp tự động để giảm thời gian chờ đợi xử lý và phản hồi!"
+  - text: "Chân thành cảm ơn anh/chị đã sử dụng hệ thống của chúng tôi!"
+  - text: "Chúng tôi rất vui vì hệ thống giải đáp tự động hỗ trợ được vấn đề của anh/chị!"
+  - text: "Rất vui vì đã hỗ trợ được anh/chị."
+  - text: "Sự hài lòng của anh/chị là động lực để chúng tôi hoàn thiện hệ thống hơn!"
 
   utter_send_ques:
-  - text: "Tin nhắn tiếp theo của anh/chị sẽ được gửi cho tư vấn viên của chúng tôi để xử lý. Chúng tôi sẽ phản hồi trong 3-5 ngày."
+  - text: "Tin nhắn tiếp theo của anh/chị sẽ được gửi cho bên có thẩm quyền để xử lý. Chúng tôi sẽ phản hồi trong 10-15 ngày."
+  - text: "Tin nhắn tiếp theo sẽ được tiếp nhận và phản hồi trong 10-15 ngày."
+  - text: "Vui lòng cung cấp thắc mắc trong 1 tin nhắn tiếp theo. Chúng tôi sẽ tiếp nhận và phản hồi trong 10-15 ngày."
+  - text: "Chúng tôi sẽ ghi nhận tin nhắn tiếp theo của anh/chị và gửi cho bên có thẩm quyền giải quyết và sẽ trả lời anh chị trong 10-15 ngày."
+  - text: "Khoảng thời gian tiếp nhận và xử lý sẽ là 10-15 ngày. Xin hãy cung cấp thắc mắc của mình trong tin nhắn tiếp theo và chúng tôi sẽ chuyển cho bên có thẩm quyền xử lý."
 
+  utter_after_send_ques:
+  - text: "Tin nhắn của anh/chị đã được chúng tôi tiếp nhận và chờ xử lý. Cảm ơn anh chị đã sử dụng hệ thống của chúng tôi."
+  - text: "Thắc mắc của anh/chị đã được ghi nhận và đang chờ xử lý."
+  - text: "Chúng tôi đã ghi nhận thắc mắc của anh/chị và đang chờ xử lý."
+  - text: "Chúng tôi đã tiếp nhận và đang xử lý thắc mắc của anh/chị."
+  - text: "Cảm ơn anh chị đã cung cấp thắc mắc của mình!"
+  
 actions:
 - action_ask
 - action_ask_detail

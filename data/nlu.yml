@@ -494,3 +494,7 @@ nlu:
 - intent: send_ques
   examples: |
     - /send_ques
+
+- intent: after_send_ques
+  examples: |
+    - /after_send_ques

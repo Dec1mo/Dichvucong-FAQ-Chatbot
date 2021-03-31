@@ -12,7 +12,10 @@ from rasa_sdk.events import SlotSet
 
 from model import *
 
-with open('data/data_dict.json', encoding='utf8') as json_file:
+# with open('data/data_dict.json', encoding='utf8') as json_file:
+#     data_dict = json.load(json_file)
+
+with open('data/new_data_dict.json', encoding='utf8') as json_file:
     data_dict = json.load(json_file)
 
 ## TFIDF
@@ -76,12 +79,18 @@ class ActionAsk(Action):
         for id in list(res_set):
             a_dict = {}
             a_dict["title"] = 'Câu hỏi #'+str(id)
-            a_dict["subtitle"] = data_dict[str(id)]['question']
+            # a_dict["subtitle"] = data_dict[str(id)]['question']
+            index = str(id)
+            if 'pid' in data_dict[index]:
+                index = data_dict[index]['pid']
+            a_dict["subtitle"] = data_dict[index]['question']
+
             # a_dict["image_url"] = "https://lh3.googleusercontent.com/proxy/vfkASNsh6HaWNCvln2MWzUGbscFhHzK-zCg4VCf1wt5V-g3B9bR7XGhdya9BsT72bDWHbaPQZm5Oz-OeX_TbmrdSU3ZebQ1WMlwZa70v-Ej0DIVlu8ysllIodpacLSWoQ0jXWNtqV8QKmMWHfW6RQ-awMg"
+            a_dict["image_url"] = "https://scontent.fhan2-6.fna.fbcdn.net/v/t1.6435-9/67968165_518806932190832_6941292360135344128_n.png?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=LL7UIid9dr4AX8cMOvO&_nc_ht=scontent.fhan2-6.fna&oh=18f3d8714478c20d7177ff851aa1696b&oe=6089388B"
             a_dict["buttons"] = [
                 {
                     "type": "postback",
-                    "payload": "/ask_detail{" + str(id) + "}",
+                    "payload": "/ask_detail{\"" + str(id) + "\"}",
                     "title": "Xem câu trả lời"
                 }
             ]
@@ -107,7 +116,7 @@ class ActionAskDetail(Action):
         for event in (list(reversed(tracker.events)))[:3]: # latest 5 messages
             if event.get("event") == "user":
                 event_text = event.get("text")
-        data = data_dict[event_text.split('{')[-1].split('}')[0]]
+        data = data_dict[event_text.split('"')[-1].split('"')[0]]
         ans = 'Đây là câu hỏi thuộc {}.\n{}'.format(data["domain"], data["answer"])
         dispatcher.utter_message(text=ans)
         dispatcher.utter_message(text='Anh/Chị có hài lòng với câu trả lời này không?')

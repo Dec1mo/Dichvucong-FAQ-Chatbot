@@ -11,20 +11,20 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say send_ques anytime the user says send_ques
-  steps:
-  - intent: send_ques
-  - action: utter_send_ques
-
-# - rule: Say affirm anytime the user says affirm
+# - rule: Say send_ques anytime the user says send_ques
 #   steps:
-#   - intent: affirm
-#   - action: utter_affirm
+#   - intent: send_ques
+#   - action: utter_send_ques
 
-# - rule: Say deny anytime the user says deny
+# - rule: test rule
 #   steps:
-#   - intent: deny
-#   - action: utter_deny
+#   - action: utter_send_ques
+#   - intent: after_send_ques
+
+# - rule: Say after_send_ques anytime the user says after_send_ques
+#   steps:
+#   - intent: after_send_ques
+#   - action: utter_after_send_ques
 
 - rule: Say thank anytime the user says thank
   steps:
