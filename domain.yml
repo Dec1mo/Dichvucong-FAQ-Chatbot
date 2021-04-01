@@ -53,7 +53,7 @@ responses:
   - text: "Chân thành cảm ơn anh/chị đã dành thời gian cho hệ thống của chúng tôi."
 
   utter_deny:
-  - text: "Anh/Chị muốn hiển thị lại câu hỏi tương tự đã được trả lời hay gửi thắc mắc cho chúng tôi (sẽ mất 3-5 ngày để xử lý và phản hồi)?"
+  - text: "Anh/Chị muốn hiển thị lại câu hỏi tương tự đã được trả lời hay gửi thắc mắc cho chúng tôi (sẽ mất 10-15 ngày để xử lý và phản hồi)?"
     buttons:
     - title: "Hiển thị lại"
       payload: '/ask'

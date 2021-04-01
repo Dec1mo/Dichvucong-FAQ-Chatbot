@@ -90,7 +90,7 @@ class ActionAsk(Action):
             a_dict["buttons"] = [
                 {
                     "type": "postback",
-                    "payload": "/ask_detail{\"" + str(id) + "\"}",
+                    "payload": "/ask_detail{" + str(id) + "}",
                     "title": "Xem câu trả lời"
                 }
             ]
@@ -116,7 +116,7 @@ class ActionAskDetail(Action):
         for event in (list(reversed(tracker.events)))[:3]: # latest 5 messages
             if event.get("event") == "user":
                 event_text = event.get("text")
-        data = data_dict[event_text.split('"')[-1].split('"')[0]]
+        data = data_dict[event_text.split('{')[-1].split('}')[0]]
         ans = 'Đây là câu hỏi thuộc {}.\n{}'.format(data["domain"], data["answer"])
         dispatcher.utter_message(text=ans)
         dispatcher.utter_message(text='Anh/Chị có hài lòng với câu trả lời này không?')
