@@ -22,10 +22,21 @@ virtualenv env -p 3.7
 env/Scripts/activate
 ```
 
+On Ubuntu:
+```
+virtualenv env -p 3.7
+source env/bin/activate
+```
+Nếu gặp lỗi không tìm thấy python 3.7 thì có thể cài thêm python 3.7 rồi chạy: `virtualenv --python=/usr/bin/python3.7 env`
+
 ### Download the repository
 ```
 git clone https://github.com/Dec1mo/chatbot
 ```
+
+Cài thư viện từ file requirements.txt
+
+`pip install -r requirements.txt`
 
 ### Download the saved data
 Download saved data [here](https://drive.google.com/drive/folders/1aUzwo-Ty2YsxY_tRk95gUuoGg3GrBEFN?usp=sharing) then add to root directory.
