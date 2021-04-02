@@ -33,14 +33,19 @@ class ActionAsk(Action):
         doc2vec_res = doc2vec_model.find_k_most_similar(query, 2)
         fuzzy_res = fuzzy_searcher.find_k_most_similar(query, [data['tokenized_question'] for data in data_dict.values()],2)
 
-        res_set = set([r[0] for r in w2v_res] + \
-                    [r[0] for r in tfidf_svd_res] + \
-                    [r[0] for r in bm25_res] + \
-                    [r[0] for r in doc2vec_res] + \
-                    [r[0] for r in fuzzy_res])
-        if res_set:
+        all_res = bm25_res + tfidf_svd_res + fuzzy_res + doc2vec_res + w2v_res
+        question_set = set()
+        question_list = []
+        for res in all_res:
+            if res[0] not in question_set:
+                question_set.add(res[0])
+                question_list.append(res[0])
+            else:
+                continue
+
+        if question_list:
             elements = []
-            for id in list(res_set):
+            for id in question_list:
                 a_dict = {}
                 a_dict["title"] = 'Câu hỏi #'+str(id)
                 # a_dict["subtitle"] = data_dict[str(id)]['question']
