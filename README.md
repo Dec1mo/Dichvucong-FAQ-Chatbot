@@ -17,17 +17,19 @@ The implementations below are tested on Window 10
 - For text similarity search: You have to know about Document Embedding (TFIDF, BM25, Word2Vec) + Cosine Similarity and Fuzzy matching.
 
 ## Implementation
-Note: should use virtualenv during system installation
+Note: should use virtualenv during system installation.
+
 Create virtual environment:
 ```
 virtualenv env -p 3.7
 ```
 Active the environment:
-On Window:
+
+- On Window:
 ```
 env/Scripts/activate
 ```
-On Ubuntu:
+- On Ubuntu:
 ```
 source env/bin/activate
 ```
