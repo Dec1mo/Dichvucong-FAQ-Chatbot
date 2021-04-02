@@ -44,7 +44,7 @@ Cài thư viện từ file requirements.txt
 `pip install -r requirements.txt`
 
 ### Download the saved data
-Download saved data [here](https://drive.google.com/drive/folders/1aUzwo-Ty2YsxY_tRk95gUuoGg3GrBEFN?usp=sharing) then add to root directory.
+Download saved data [here](https://drive.google.com/drive/folders/1RSnk23lL2vQhV4-qIh2IeCHkYXdBWWKl?usp=sharing) then add to root directory.
 
 chatbot:
 
