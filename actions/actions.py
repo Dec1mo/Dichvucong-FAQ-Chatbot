@@ -34,7 +34,7 @@ class ActionAsk(Action):
         fuzzy_res = fuzzy_searcher.find_k_most_similar(query, [data['tokenized_question'] for data in data_dict.values()],2)
 
         res_set = set([r[0] for r in w2v_res] + \
-                    [r[0] for r in tfidf_res] + \
+                    [r[0] for r in tfidf_svd_res] + \
                     [r[0] for r in bm25_res] + \
                     [r[0] for r in doc2vec_res] + \
                     [r[0] for r in fuzzy_res])
