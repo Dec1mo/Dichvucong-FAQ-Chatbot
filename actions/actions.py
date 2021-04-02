@@ -38,8 +38,7 @@ class ActionAsk(Action):
                     [r[0] for r in bm25_res] + \
                     [r[0] for r in doc2vec_res] + \
                     [r[0] for r in fuzzy_res])
-
-        if not res_set:
+        if res_set:
             elements = []
             for id in list(res_set):
                 a_dict = {}
