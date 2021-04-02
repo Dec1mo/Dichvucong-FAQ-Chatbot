@@ -23,13 +23,31 @@ virtualenv env -p 3.7
 env/Scripts/activate
 ```
 
+On Ubuntu:
+```
+virtualenv env -p 3.7
+source env/bin/activate
+```
+
 ### Download the repository
 ```
 git clone https://github.com/Dec1mo/chatbot
 ```
 
+Cài thư viện từ file requirements.txt
+
+`pip install -r requirements.txt`
+
 ### Download the saved data
 Download saved data [here](https://drive.google.com/drive/folders/1aUzwo-Ty2YsxY_tRk95gUuoGg3GrBEFN?usp=sharing) then add to root directory.
+
+chatbot:
+
+|_ pkl
+
+|_wiki.vi.vec
+
+|_command.sh
 
 ### Start actions server
 To handle some complex behaviors of the chatbot, we need to customize some rasa actions in ```chatbot/actions/actions.py```. Then we need to define ```action_endpoint``` in ```chatbot/endpoints.yml``` for rasa to know where is actions server. To start actions server, run:
