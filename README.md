@@ -4,16 +4,17 @@
 - [rasa](https://rasa.com/): Chatbot core
 - [torch](https://pytorch.org/)
 - [scipy](https://www.scipy.org/)
-- [underthesea](https://pypi.org/project/underthesea/)
+- [pyvi](https://pypi.org/project/pyvi/)
 - [gensim](https://pypi.org/project/gensim/)
 - [spacy](https://spacy.io/)
+- [fuzzywuzzy](https://pypi.org/project/fuzzywuzzy/)
 - [rank_bm25](https://pypi.org/project/rank-bm25/)
 
 The implementations below are tested on Window 10
 
 ## Background
 - For building chatbot: You have to know about Rasa and how to implement a chatbot using it.
-- For text similarity search: You have to know about Document Embedding (TFIDF, BM25, Word2Vec) + Cosine Similarity.
+- For text similarity search: You have to know about Document Embedding (TFIDF, BM25, Word2Vec) + Cosine Similarity and Fuzzy matching.
 
 ## Implementation
 Note: should use virtualenv during system installation

@@ -4,7 +4,7 @@ from rasa.nlu.tokenizers.tokenizer import Token, Tokenizer
 from rasa.shared.nlu.training_data.message import Message
 
 from rasa.nlu.constants import TOKENS_NAMES, MESSAGE_ATTRIBUTES
-from underthesea import word_tokenize
+from pyvi import ViTokenizer
 
 class VietnameseTokenizer(Tokenizer):
 
@@ -15,5 +15,5 @@ class VietnameseTokenizer(Tokenizer):
 
     def tokenize(self, message: Message, attribute: Text) -> List[Token]:
         text = message.get(attribute)
-        words = word_tokenize(text)
+        words = [w.replace('_', ' ') for w in ViTokenizer.tokenize(text).split(' ')]
         return self._convert_words_to_tokens(words, text)

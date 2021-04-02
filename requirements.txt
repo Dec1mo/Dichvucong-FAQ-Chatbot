@@ -1,7 +1,8 @@
 torch
 scipy
-underthesea
+pyvi
 gensim
 spacy
 rank_bm25
+fuzzywuzzy
 rasa
