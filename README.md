@@ -18,14 +18,17 @@ The implementations below are tested on Window 10
 
 ## Implementation
 Note: should use virtualenv during system installation
+Create virtual environment:
 ```
 virtualenv env -p 3.7
+```
+Active the environment:
+On Window:
+```
 env/Scripts/activate
 ```
-
 On Ubuntu:
 ```
-virtualenv env -p 3.7
 source env/bin/activate
 ```
 
@@ -43,9 +46,7 @@ Download saved data [here](https://drive.google.com/drive/folders/1aUzwo-Ty2YsxY
 
 chatbot:
 
-|_ pkl
-
-|_wiki.vi.vec
+|_ saved
 
 |_command.sh
 
