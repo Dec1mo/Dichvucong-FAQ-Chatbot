@@ -1,4 +1,15 @@
-# chatbot
+# Dichvucong FAQ Chatbot
+## Main Features:
+- Similarity Search: 
+    - Using Cosine Similarity with these embedding methods:
+        - TFIDF + SVD
+        - BM25
+        - Word2Vec
+        - Doc2Vec
+    - Fuzzy Searching: Partional Ratio by FuzzyWuzzy.
+- Better at communicating with human using custom rasa actions.
+- Integrating into Facebook Messenger
+
 ## Requirements
 - Python >= 3.6
 - [rasa](https://rasa.com/): Chatbot core
